@@ -4,7 +4,7 @@ import requests
 
 # load env retrive get our key
 load_dotenv()
-key = os.getenv('RIOTKey')
+key = os.getenv("RIOTKey")
 
 # note if key is present or not
 if not key:
@@ -13,7 +13,7 @@ print("Key obtained!")
 
 # get account by riotID using url and key
 url = "https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/iliketerraria727/honi"
-headers = {'X-Riot-Token': key}
+headers = {"X-Riot-Token": key}
 
 response = requests.get(url, headers=headers, timeout=10)
 print(response.status_code)
